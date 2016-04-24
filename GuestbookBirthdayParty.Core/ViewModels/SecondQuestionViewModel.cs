@@ -5,7 +5,7 @@ using System.Diagnostics;
 
 namespace GuestbookBirthdayParty.Core.ViewModels
 {
-    public class FirstQuestionViewModel: MvxViewModel
+    public class SecondQuestionViewModel: MvxViewModel
     {
         IMvxCommand _answerClickedCommand;
         public System.Windows.Input.ICommand AnswerClickedCommand
@@ -20,7 +20,7 @@ namespace GuestbookBirthdayParty.Core.ViewModels
         private void DoAnswerClickedCommand(string chosenAnswer)
         {
             SaveChosenAnswer(chosenAnswer);
-            ShowViewModel<SecondQuestionViewModel>();
+            ShowViewModel<ThirdQuestionViewModel>();
         }
 
         private void SaveChosenAnswer(string answer)
