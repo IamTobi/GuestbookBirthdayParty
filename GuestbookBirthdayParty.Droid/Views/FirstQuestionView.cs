@@ -9,17 +9,18 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+
 using MvvmCross.Droid.Views;
 
 namespace GuestbookBirthdayParty.Droid.Views
 {
-    [Activity(Label = "FirstQView")]
-    public class FirstQView : MvxActivity
+    [Activity(Label = "FirstQuestionView")]
+    public class FirstQuestionView : MvxActivity
     {
-        protected override void OnCreate(Bundle bundle)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(bundle);
-            SetContentView(Resource.Layout.FirstQView);
+            base.OnCreate(savedInstanceState);
+            SetContentView(Resource.Layout.FirstQuestionView);
         }
     }
 }
