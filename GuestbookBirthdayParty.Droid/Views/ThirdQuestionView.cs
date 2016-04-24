@@ -12,7 +12,7 @@ namespace GuestbookBirthdayParty.Droid.Views
     {
         
 
-        protected override void OnCreate(Bundle bundle)
+        protected override void OnCreate(Bundle bundle) 
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.ThirdQuestionView);
