@@ -11,5 +11,26 @@ namespace GuestbookBirthdayParty.Core.ViewModels
             set { _answerChosen = value; RaisePropertyChanged(() => AnswerChosen); }
         }
 
+        IMvxCommand _answerClickedCommand;
+        public System.Windows.Input.ICommand AnswerClickedCommand
+        {
+            get
+            {
+                _answerClickedCommand = _answerClickedCommand ?? new MvxCommand<string>(DoAnswerClickedCommand);
+                return _answerClickedCommand;
+            }
+        }
+
+        private void DoAnswerClickedCommand(string chosenAnswer)
+        {
+            SaveChosenAnswer(chosenAnswer);
+            ShowViewModel<FirstViewModel>();
+        }
+
+        private void SaveChosenAnswer(string answer)
+        {
+
+        }
+
     }
 }

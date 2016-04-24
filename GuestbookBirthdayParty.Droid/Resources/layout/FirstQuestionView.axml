@@ -23,22 +23,29 @@
             android:layout_height="wrap_content"
             android:gravity="center">
             <Button
-                android:text="FirstButton"
+                android:text="first"
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
-                android:onClick="onBtnClicked" />
+                local:MvxBind="Click AnswerClickedCommand,CommandParameter=first"
+                android:id="@+id/firstAnswer" />
             <Button
-                android:text="SecondButton"
+                android:text="second"
                 android:layout_width="wrap_content"
-                android:layout_height="60dp" />
+                android:layout_height="60dp"
+                local:MvxBind="Click AnswerClickedCommand,CommandParameter=second"
+                android:id="@+id/secondAnswer" />
             <Button
-                android:text="ThirdButton"
+                android:text="third"
                 android:layout_width="wrap_content"
-                android:layout_height="60dp" />
+                android:layout_height="60dp"
+                local:MvxBind="Click AnswerClickedCommand,CommandParameter=third"
+                android:id="@+id/thirdAnswer" />
             <Button
-                android:text="FourthButton"
+                android:text="fourth"
                 android:layout_width="wrap_content"
-                android:layout_height="60dp" />
+                android:layout_height="60dp"
+                local:MvxBind="Click AnswerClickedCommand,CommandParameter=fourth"
+                android:id="@+id/fourthAnswer" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
