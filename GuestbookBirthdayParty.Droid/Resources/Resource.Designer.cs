@@ -87,16 +87,13 @@ namespace GuestbookBirthdayParty.Droid
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int chalkboard = 2130837504;
+			public const int Icon = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int gebbi26 = 2130837505;
+			public const int splash = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int Icon = 2130837506;
-			
-			// aapt resource value: 0x7f020003
-			public const int splash = 2130837507;
+			public const int splash_best = 2130837506;
 			
 			static Drawable()
 			{
@@ -117,12 +114,6 @@ namespace GuestbookBirthdayParty.Droid
 			// aapt resource value: 0x7f040001
 			public const int MvxBindingTagUnique = 2130968577;
 			
-			// aapt resource value: 0x7f040004
-			public const int MyButton = 2130968580;
-			
-			// aapt resource value: 0x7f040003
-			public const int button1 = 2130968579;
-			
 			// aapt resource value: 0x7f040002
 			public const int textView1 = 2130968578;
 			
@@ -140,16 +131,13 @@ namespace GuestbookBirthdayParty.Droid
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int FirstQView = 2130903040;
+			public const int FirstQuestionView = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int InitialisationView = 2130903041;
+			public const int FirstView = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int Main = 2130903042;
-			
-			// aapt resource value: 0x7f030003
-			public const int SplashScreen = 2130903043;
+			public const int SplashScreen = 2130903042;
 			
 			static Layout()
 			{

@@ -11,7 +11,7 @@ namespace GuestbookBirthdayParty.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<ViewModels.InitialisationViewModel>();
+            RegisterAppStart<ViewModels.FirstViewModel>();
         }
     }
 }

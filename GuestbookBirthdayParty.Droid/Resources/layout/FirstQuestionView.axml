@@ -1,22 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#400000"
+    android:gravity="center">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button1" />
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button2" />
-</LinearLayout>
+        android:gravity="center">
+        <TextView
+            android:text="First question here"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="40dp"
+            android:id="@+id/textView1" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <Button
+                android:text="FirstButton"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:onClick="onBtnClicked" />
+            <Button
+                android:text="SecondButton"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp" />
+            <Button
+                android:text="ThirdButton"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp" />
+            <Button
+                android:text="FourthButton"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

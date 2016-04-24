@@ -1,26 +1,27 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
-using Android.Widget;
-
 using MvvmCross.Droid.Views;
+using System;
 
 namespace GuestbookBirthdayParty.Droid.Views
 {
-    [Activity(Label = "FirstQuestionView")]
+    [Activity(Label = "View for FirstQuestionView")]
     public class FirstQuestionView : MvxActivity
     {
-        protected override void OnCreate(Bundle savedInstanceState)
+        
+
+        protected override void OnCreate(Bundle bundle)
         {
-            base.OnCreate(savedInstanceState);
+            base.OnCreate(bundle);
             SetContentView(Resource.Layout.FirstQuestionView);
         }
+        [Java.Interop.Export("onBtnClicked")]
+        public void onBtnClicked(View v)
+        {
+           
+        }
+
+
     }
 }
