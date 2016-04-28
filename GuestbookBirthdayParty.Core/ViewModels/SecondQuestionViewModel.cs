@@ -1,6 +1,4 @@
-﻿using Chance.MvvmCross.Plugins.UserInteraction;
-using Cirrious.CrossCore;
-using MvvmCross.Core.ViewModels;
+﻿using MvvmCross.Core.ViewModels;
 using System.Diagnostics;
 
 namespace GuestbookBirthdayParty.Core.ViewModels

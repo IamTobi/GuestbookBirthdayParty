@@ -22,28 +22,32 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="center">
-            <Button
-                android:text="first"
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@mipmap/red"
+                android:layout_marginRight="20dp"
                 local:MvxBind="Click AnswerClickedCommand,CommandParameter=first"
                 android:id="@+id/firstAnswer" />
-            <Button
-                android:text="second"
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@mipmap/yellow"
+                android:layout_marginRight="20dp"
                 local:MvxBind="Click AnswerClickedCommand,CommandParameter=second"
                 android:id="@+id/secondAnswer" />
-            <Button
-                android:text="third"
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@mipmap/green"
+                android:layout_marginRight="20dp"
                 local:MvxBind="Click AnswerClickedCommand,CommandParameter=third"
                 android:id="@+id/thirdAnswer" />
-            <Button
-                android:text="fourth"
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@mipmap/supergreen"
+                android:layout_marginRight="20dp"
                 local:MvxBind="Click AnswerClickedCommand,CommandParameter=fourth"
                 android:id="@+id/fourthAnswer" />
         </LinearLayout>

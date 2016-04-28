@@ -1,9 +1,6 @@
 using Android.App;
 using Android.OS;
-using Android.Views;
-using GuestbookBirthdayParty.Core.ViewModels;
 using MvvmCross.Droid.Views;
-using System;
 
 namespace GuestbookBirthdayParty.Droid.Views
 {

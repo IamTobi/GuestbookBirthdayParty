@@ -1,13 +1,37 @@
+using System.Windows.Input;
+using GuestbookBirthdayParty.Core.Services;
 using MvvmCross.Core.ViewModels;
 
 namespace GuestbookBirthdayParty.Core.ViewModels
 {
-    public class FirstViewModel 
-        : MvxViewModel
+    public class FirstViewModel : MvxViewModel
     {
+        #region services
 
-        MvxCommand _goFirstQuestionCommand;
-        public System.Windows.Input.ICommand GoFirstQuestionCommand
+        protected readonly IDataService DataService;
+
+        #endregion
+
+        #region init
+
+        public FirstViewModel(IDataService dataService)
+        {
+            DataService = dataService;
+        }
+
+        public void Init()
+        {
+            DataService.CreateDatabase();
+        }
+        #endregion
+
+
+        #region commands
+        private MvxCommand _goFirstQuestionCommand;
+
+       
+
+        public ICommand GoFirstQuestionCommand
         {
             get
             {
@@ -16,9 +40,12 @@ namespace GuestbookBirthdayParty.Core.ViewModels
             }
         }
 
+
         private void DoGoFirstQuestionCommand()
         {
             ShowViewModel<FirstQuestionViewModel>();
         }
+        #endregion
+        
     }
 }

@@ -1,3 +1,5 @@
+using System;
+using Java.IO;
 using MvvmCross.Platform.IoC;
 
 namespace GuestbookBirthdayParty.Core
@@ -12,6 +14,11 @@ namespace GuestbookBirthdayParty.Core
                 .RegisterAsLazySingleton();
 
             RegisterAppStart<ViewModels.FirstViewModel>();
+        }
+
+        public static implicit operator App(File v)
+        {
+            throw new NotImplementedException();
         }
     }
 }

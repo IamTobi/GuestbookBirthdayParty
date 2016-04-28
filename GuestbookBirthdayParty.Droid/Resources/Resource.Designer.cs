@@ -87,13 +87,16 @@ namespace GuestbookBirthdayParty.Droid
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int blurry1 = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int splash = 2130837505;
+			public const int Icon = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int splash_best = 2130837506;
+			public const int splash = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int splash_best = 2130837507;
 			
 			static Drawable()
 			{
@@ -108,26 +111,26 @@ namespace GuestbookBirthdayParty.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f040000
-			public const int MvvmCrossTagId = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int MvvmCrossTagId = 2131034112;
 			
-			// aapt resource value: 0x7f040001
-			public const int MvxBindingTagUnique = 2130968577;
+			// aapt resource value: 0x7f050001
+			public const int MvxBindingTagUnique = 2131034113;
 			
-			// aapt resource value: 0x7f040003
-			public const int firstAnswer = 2130968579;
+			// aapt resource value: 0x7f050003
+			public const int firstAnswer = 2131034115;
 			
-			// aapt resource value: 0x7f040006
-			public const int fourthAnswer = 2130968582;
+			// aapt resource value: 0x7f050006
+			public const int fourthAnswer = 2131034118;
 			
-			// aapt resource value: 0x7f040004
-			public const int secondAnswer = 2130968580;
+			// aapt resource value: 0x7f050004
+			public const int secondAnswer = 2131034116;
 			
-			// aapt resource value: 0x7f040002
-			public const int textView1 = 2130968578;
+			// aapt resource value: 0x7f050002
+			public const int textView1 = 2131034114;
 			
-			// aapt resource value: 0x7f040005
-			public const int thirdAnswer = 2130968581;
+			// aapt resource value: 0x7f050005
+			public const int thirdAnswer = 2131034117;
 			
 			static Id()
 			{
@@ -142,23 +145,23 @@ namespace GuestbookBirthdayParty.Droid
 		public partial class Layout
 		{
 			
-			// aapt resource value: 0x7f030000
-			public const int FinishView = 2130903040;
+			// aapt resource value: 0x7f040000
+			public const int FinishView = 2130968576;
 			
-			// aapt resource value: 0x7f030001
-			public const int FirstQuestionView = 2130903041;
+			// aapt resource value: 0x7f040001
+			public const int FirstQuestionView = 2130968577;
 			
-			// aapt resource value: 0x7f030002
-			public const int FirstView = 2130903042;
+			// aapt resource value: 0x7f040002
+			public const int FirstView = 2130968578;
 			
-			// aapt resource value: 0x7f030003
-			public const int SecondQuestionView = 2130903043;
+			// aapt resource value: 0x7f040003
+			public const int SecondQuestionView = 2130968579;
 			
-			// aapt resource value: 0x7f030004
-			public const int SplashScreen = 2130903044;
+			// aapt resource value: 0x7f040004
+			public const int SplashScreen = 2130968580;
 			
-			// aapt resource value: 0x7f030005
-			public const int ThirdQuestionView = 2130903045;
+			// aapt resource value: 0x7f040005
+			public const int ThirdQuestionView = 2130968581;
 			
 			static Layout()
 			{
@@ -170,14 +173,42 @@ namespace GuestbookBirthdayParty.Droid
 			}
 		}
 		
+		public partial class Mipmap
+		{
+			
+			// aapt resource value: 0x7f030000
+			public const int green = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int red = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int supergreen = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int yellow = 2130903043;
+			
+			static Mipmap()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Mipmap()
+			{
+			}
+		}
+		
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f060001
-			public const int ApplicationName = 2131099649;
+			// aapt resource value: 0x7f070001
+			public const int ApplicationName = 2131165185;
 			
-			// aapt resource value: 0x7f060000
-			public const int Hello = 2131099648;
+			// aapt resource value: 0x7f070000
+			public const int Hello = 2131165184;
+			
+			// aapt resource value: 0x7f070002
+			public const int openCamera = 2131165186;
 			
 			static String()
 			{
@@ -192,8 +223,8 @@ namespace GuestbookBirthdayParty.Droid
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int Theme_Splash = 2131034112;
+			// aapt resource value: 0x7f060000
+			public const int Theme_Splash = 2131099648;
 			
 			static Style()
 			{
