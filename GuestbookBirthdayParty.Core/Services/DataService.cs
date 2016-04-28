@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using System.Linq;
 using GuestbookBirthdayParty.Core.Models;
 using MvvmCross.Plugins.Sqlite;
 using SQLite.Net;
@@ -9,30 +10,30 @@ namespace GuestbookBirthdayParty.Core.Services
     {
         private readonly SQLiteConnection _connection;
 
-        public DataService(IMvxSqliteConnectionFactory factory)
+        public DataService( IMvxSqliteConnectionFactory sqliteConnectionFactory)
         {
-            var config = new SqLiteConfig("db");
-            _connection = factory.GetConnection(config);
-        }
-
-        public void CreateDatabase()
-        {
+            _connection = sqliteConnectionFactory.GetConnection("data.dat");
             _connection.CreateTable<Answer>();
+        }
+        
+        public List<Answer> GetAllTheAnswers()
+        {
+            return _connection.Table<Answer>().ToList();
         }
 
         public void Insert(Answer answer)
         {
-            throw new NotImplementedException();
+            _connection.Insert(answer);
         }
 
         public void Update(Answer answer)
         {
-            throw new NotImplementedException();
+            _connection.Update(answer);
         }
 
         public void Delete(Answer answer)
         {
-            throw new NotImplementedException();
+            _connection.Delete(answer);
         }
 
         public int Count { get; }

@@ -1,11 +1,23 @@
 ﻿using MvvmCross.Core.ViewModels;
 using System.Diagnostics;
+using GuestbookBirthdayParty.Core.Models;
+using GuestbookBirthdayParty.Core.Services;
 
 namespace GuestbookBirthdayParty.Core.ViewModels
 {
     public class SecondQuestionViewModel: MvxViewModel
     {
+        private IDataService _dataService;
+
+        public SecondQuestionViewModel(IDataService dataService)
+        {
+            _dataService = dataService;
+        }
+
         IMvxCommand _answerClickedCommand;
+
+       
+
         public System.Windows.Input.ICommand AnswerClickedCommand
         {
             get
@@ -23,6 +35,11 @@ namespace GuestbookBirthdayParty.Core.ViewModels
 
         private void SaveChosenAnswer(string answer)
         {
+            var secondAnswer = new Answer
+            {
+                Answer2 = answer
+            };
+            _dataService.Update(secondAnswer);
             Debug.WriteLine(answer);
         }
 

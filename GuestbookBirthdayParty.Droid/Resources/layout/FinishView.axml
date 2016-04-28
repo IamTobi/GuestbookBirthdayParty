@@ -35,5 +35,11 @@
                 local:MvxBind="Click AnswerClickedCommand,CommandParameter=second"
                 android:id="@+id/secondAnswer" />
         </LinearLayout>
+        <Mvx.MvxListView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            local:MvxBind="ItemsSource AnswerList" />
     </LinearLayout>
 </RelativeLayout>

@@ -1,10 +1,11 @@
-﻿using GuestbookBirthdayParty.Core.Models;
+﻿using System.Collections.Generic;
+using GuestbookBirthdayParty.Core.Models;
 
 namespace GuestbookBirthdayParty.Core.Services
 {
-    public interface IDataService
+    public interface IDataService 
     {
-        void CreateDatabase();
+        List<Answer> GetAllTheAnswers(); 
         void Insert(Answer answer);
         void Update(Answer answer);
         void Delete(Answer answer);
