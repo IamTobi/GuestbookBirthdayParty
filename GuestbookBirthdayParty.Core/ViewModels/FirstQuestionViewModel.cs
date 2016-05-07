@@ -30,16 +30,25 @@ namespace GuestbookBirthdayParty.Core.ViewModels
         private void DoAnswerClickedCommand(string chosenAnswer)
         {
             SaveChosenAnswer(chosenAnswer);
-            ShowViewModel<SecondQuestionViewModel>();
+            switch (chosenAnswer)
+            {
+                case "first":
+                case "second":
+                case "third":
+                    ShowViewModel<SecondQuestionViewModel>();
+                    break;
+                case "fourth":
+
+                    break;
+                case "fifth":
+                    break;
+            }
         }
 
         private void SaveChosenAnswer(string answer)
         {
-            var firstAnswer = new Answer
-            {
-                Answer1 = answer
-            };
-            _dataService.Insert(firstAnswer);
+            
+            _dataService.UpdateTheAnswer(answer,1);
         }
 
     }

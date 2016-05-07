@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#400000"
+    android:background="@drawable/background"
     android:gravity="center">
     <LinearLayout
         android:orientation="vertical"
@@ -27,14 +27,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
                 local:MvxBind="Click SendClickedCommand,CommandParameter=send"
-                android:id="@+id/firstAnswer" />
+                android:id="@+id/sendButton" />
             <Button
                 android:text="take the picture"
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
-                local:MvxBind="Click AnswerClickedCommand,CommandParameter=second"
-                android:id="@+id/secondAnswer" />
+                android:id="@+id/takeThePictureButton" />
         </LinearLayout>
+        <ImageView
+          android:src="@android:drawable/ic_menu_gallery"
+          android:layout_width="fill_parent"
+          android:layout_height="300.0dp"
+          android:id="@+id/imageView1"
+          android:adjustViewBounds="true" />
         <Mvx.MvxListView
             android:minWidth="25px"
             android:minHeight="25px"

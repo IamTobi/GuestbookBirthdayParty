@@ -6,14 +6,16 @@ namespace GuestbookBirthdayParty.Core.ViewModels
 {
     public class FirstViewModel : MvxViewModel
     {
-        public FirstViewModel(IDataService dataService)
-        {
+        private IDataService _dataService;
 
+        public FirstViewModel(IDataService dataService1)
+        {
+            _dataService = dataService1;
         }
 
         public void Init()
         {
-
+            _dataService.InitTheAnswer();
         }
         #region commands
 

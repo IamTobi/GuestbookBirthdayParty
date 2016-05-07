@@ -1,14 +1,15 @@
 ﻿using System.Collections.Generic;
+using Android.Accounts;
 using GuestbookBirthdayParty.Core.Models;
 
 namespace GuestbookBirthdayParty.Core.Services
 {
-    public interface IDataService 
+    public interface IDataService
     {
+        void InitTheAnswer();
+        void UpdateTheAnswer(string answer,int questionNumber);
+        void InsertTheAnswer();
         List<Answer> GetAllTheAnswers(); 
-        void Insert(Answer answer);
-        void Update(Answer answer);
-        void Delete(Answer answer);
         int Count { get; }
     }
 }

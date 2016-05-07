@@ -18,6 +18,7 @@ namespace GuestbookBirthdayParty.Core.ViewModels
         private void DoAnswerClickedCommand(string chosenAnswer)
         {
             SaveChosenAnswer(chosenAnswer);
+           
             ShowViewModel<FinishViewModel>();
         }
 

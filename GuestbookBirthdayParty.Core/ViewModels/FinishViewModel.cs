@@ -23,6 +23,7 @@ namespace GuestbookBirthdayParty.Core.ViewModels
 
         public void Init()
         {
+            _dataService.InsertTheAnswer();
             AnswerList = _dataService.GetAllTheAnswers();
         }
 

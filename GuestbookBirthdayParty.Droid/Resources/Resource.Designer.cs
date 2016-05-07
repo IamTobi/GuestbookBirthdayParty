@@ -91,16 +91,25 @@ namespace GuestbookBirthdayParty.Droid
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int blurry1 = 2130837504;
+			public const int background = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int Icon = 2130837505;
+			public const int ic_chalksmileys_01 = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int splash = 2130837506;
+			public const int ic_chalksmileys_02 = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int splash_best = 2130837507;
+			public const int ic_chalksmileys_03 = 2130837507;
+			
+			// aapt resource value: 0x7f020004
+			public const int ic_chalksmileys_04 = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int ic_chalksmileys_05 = 2130837509;
+			
+			// aapt resource value: 0x7f020006
+			public const int splashscreen = 2130837510;
 			
 			static Drawable()
 			{
@@ -121,20 +130,53 @@ namespace GuestbookBirthdayParty.Droid
 			// aapt resource value: 0x7f060001
 			public const int MvxBindingTagUnique = 2131099649;
 			
-			// aapt resource value: 0x7f060003
-			public const int firstAnswer = 2131099651;
+			// aapt resource value: 0x7f06000c
+			public const int fifthAnswer = 2131099660;
+			
+			// aapt resource value: 0x7f060008
+			public const int firstAnswer = 2131099656;
+			
+			// aapt resource value: 0x7f060007
+			public const int firstQuestionHeadline = 2131099655;
 			
 			// aapt resource value: 0x7f060006
-			public const int fourthAnswer = 2131099654;
+			public const int firstQuestionSubheadline = 2131099654;
+			
+			// aapt resource value: 0x7f06000b
+			public const int fourthAnswer = 2131099659;
+			
+			// aapt resource value: 0x7f060005
+			public const int imageView1 = 2131099653;
+			
+			// aapt resource value: 0x7f060009
+			public const int secondAnswer = 2131099657;
+			
+			// aapt resource value: 0x7f06000f
+			public const int secondQFirstAnswer = 2131099663;
+			
+			// aapt resource value: 0x7f060010
+			public const int secondQSecondAnswer = 2131099664;
+			
+			// aapt resource value: 0x7f060011
+			public const int secondQThirdAnswer = 2131099665;
+			
+			// aapt resource value: 0x7f06000e
+			public const int secondQuestionHeadline = 2131099662;
+			
+			// aapt resource value: 0x7f06000d
+			public const int secondQuestionSubHeadline = 2131099661;
+			
+			// aapt resource value: 0x7f060003
+			public const int sendButton = 2131099651;
 			
 			// aapt resource value: 0x7f060004
-			public const int secondAnswer = 2131099652;
+			public const int takeThePictureButton = 2131099652;
 			
 			// aapt resource value: 0x7f060002
 			public const int textView1 = 2131099650;
 			
-			// aapt resource value: 0x7f060005
-			public const int thirdAnswer = 2131099653;
+			// aapt resource value: 0x7f06000a
+			public const int thirdAnswer = 2131099658;
 			
 			static Id()
 			{
@@ -181,16 +223,7 @@ namespace GuestbookBirthdayParty.Droid
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int green = 2130903040;
-			
-			// aapt resource value: 0x7f030001
-			public const int red = 2130903041;
-			
-			// aapt resource value: 0x7f030002
-			public const int supergreen = 2130903042;
-			
-			// aapt resource value: 0x7f030003
-			public const int yellow = 2130903043;
+			public const int ic_launcher = 2130903040;
 			
 			static Mipmap()
 			{

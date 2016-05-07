@@ -35,11 +35,7 @@ namespace GuestbookBirthdayParty.Core.ViewModels
 
         private void SaveChosenAnswer(string answer)
         {
-            var secondAnswer = new Answer
-            {
-                Answer2 = answer
-            };
-            _dataService.Update(secondAnswer);
+            
             Debug.WriteLine(answer);
         }
 

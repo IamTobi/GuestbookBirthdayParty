@@ -1,55 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:local="http://schemas.android.com/apk/res-auto"
+                xmlns:local="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/background"
+                android:gravity="center">
+  <LinearLayout
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="#004000"
+    android:layout_height="wrap_content"
     android:gravity="center">
+    <TextView
+      android:text="#2"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:textSize="20dp"
+      android:color="#d3d3d3"
+      android:layout_marginLeft="18dip"
+      android:id="@+id/secondQuestionSubHeadline" />
+    <TextView
+      android:text="Warum würdest du die Party nicht weiter empfehlen?"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:textSize="50dp"
+      android:layout_marginLeft="18dip"
+      android:id="@+id/secondQuestionHeadline" />
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-        <TextView
-            android:text="Second question here"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textSize="40dp"
-            android:id="@+id/textView1" />
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-            <ImageButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@mipmap/red"
-                android:layout_marginRight="20dp"
-                local:MvxBind="Click AnswerClickedCommand,CommandParameter=first"
-                android:id="@+id/firstAnswer" />
-            <ImageButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@mipmap/yellow"
-                android:layout_marginRight="20dp"
-                local:MvxBind="Click AnswerClickedCommand,CommandParameter=second"
-                android:id="@+id/secondAnswer" />
-            <ImageButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@mipmap/green"
-                android:layout_marginRight="20dp"
-                local:MvxBind="Click AnswerClickedCommand,CommandParameter=third"
-                android:id="@+id/thirdAnswer" />
-            <ImageButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@mipmap/supergreen"
-                android:layout_marginRight="20dp"
-                local:MvxBind="Click AnswerClickedCommand,CommandParameter=fourth"
-                android:id="@+id/fourthAnswer" />
-        </LinearLayout>
+      android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="100dip"
+      android:gravity="center">
+      <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginRight="20dp"
+        local:MvxBind="Click AnswerClickedCommand,CommandParameter=zu wenig Alkohol"
+        android:text="zu wenig Alkohol"
+        android:id="@+id/secondQFirstAnswer" />
+      <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginRight="20dp"
+        local:MvxBind="Click AnswerClickedCommand,CommandParameter=Musik zu laut/leise"
+        android:text="Die Musik ist mir zu laut/leise"
+        android:id="@+id/secondQSecondAnswer" />
+      <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginRight="20dp"
+        local:MvxBind="Click AnswerClickedCommand,CommandParameter=schlechte Stimmung"
+        android:text="schlechte Stimmung"
+        android:id="@+id/secondQThirdAnswer" />
+      <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginRight="20dp"
+        local:MvxBind="Click AnswerClickedCommand,CommandParameter=schlechte Stimmung"
+        android:text="ich fühle mich ausgeschlossen/lonely"
+        android:id="@+id/secondQThirdAnswer" />
+
     </LinearLayout>
+  </LinearLayout>
 </RelativeLayout>
