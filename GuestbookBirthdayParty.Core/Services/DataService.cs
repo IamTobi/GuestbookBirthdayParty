@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using GuestbookBirthdayParty.Core.Models;
 using MvvmCross.Plugins.Sqlite;
@@ -9,27 +8,18 @@ namespace GuestbookBirthdayParty.Core.Services
 {
     public class DataService : IDataService
     {
-        #region Properties
-        private readonly SQLiteConnection _connection;
-
-        private Answer WhatThePeopleSaid;
-
-        #endregion
-
-
-        public DataService( IMvxSqliteConnectionFactory sqliteConnectionFactory)
+        public DataService(IMvxSqliteConnectionFactory sqliteConnectionFactory)
         {
-            
             _connection = sqliteConnectionFactory.GetConnection("data.dat");
             _connection.CreateTable<Answer>();
         }
 
         public void InitTheAnswer()
         {
-            WhatThePeopleSaid= new Answer();
+            WhatThePeopleSaid = new Answer();
         }
 
-        public void UpdateTheAnswer(string answer,int questionNumber)
+        public void UpdateTheAnswer(string answer, int questionNumber)
         {
             switch (questionNumber)
             {
@@ -52,14 +42,22 @@ namespace GuestbookBirthdayParty.Core.Services
         {
             return _connection.Table<Answer>().ToList();
         }
-        
+
 
         public void InsertTheAnswer()
         {
             _connection.Insert(WhatThePeopleSaid);
         }
-        
+
 
         public int Count { get; }
+
+        #region Properties
+
+        private readonly SQLiteConnection _connection;
+
+        private Answer WhatThePeopleSaid;
+
+        #endregion
     }
 }

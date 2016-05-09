@@ -41,6 +41,7 @@ namespace GuestbookBirthdayParty.Core.ViewModels
 
                     break;
                 case "fifth":
+                    ShowViewModel<ThirdQuestionViewModel>();
                     break;
             }
         }

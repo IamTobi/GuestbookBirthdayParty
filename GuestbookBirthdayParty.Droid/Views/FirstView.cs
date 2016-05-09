@@ -1,6 +1,8 @@
 using Android.App;
 using Android.Content.PM;
+using Android.Graphics;
 using Android.OS;
+using Android.Widget;
 using MvvmCross.Droid.Views;
 
 namespace GuestbookBirthdayParty.Droid.Views
@@ -12,7 +14,6 @@ namespace GuestbookBirthdayParty.Droid.Views
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.FirstView);
-           
         }
         public override void OnBackPressed()
         {

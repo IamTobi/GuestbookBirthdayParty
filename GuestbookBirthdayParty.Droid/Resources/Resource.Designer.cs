@@ -94,22 +94,52 @@ namespace GuestbookBirthdayParty.Droid
 			public const int background = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int ic_chalksmileys_01 = 2130837505;
+			public const int clickme = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int ic_chalksmileys_02 = 2130837506;
+			public const int ic_chalksmileys_01 = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int ic_chalksmileys_03 = 2130837507;
+			public const int ic_chalksmileys_02 = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int ic_chalksmileys_04 = 2130837508;
+			public const int ic_chalksmileys_03 = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int ic_chalksmileys_05 = 2130837509;
+			public const int ic_chalksmileys_04 = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int splashscreen = 2130837510;
+			public const int ic_chalksmileys_05 = 2130837510;
+			
+			// aapt resource value: 0x7f020007
+			public const int negative02 = 2130837511;
+			
+			// aapt resource value: 0x7f020008
+			public const int negative03 = 2130837512;
+			
+			// aapt resource value: 0x7f020009
+			public const int negative04 = 2130837513;
+			
+			// aapt resource value: 0x7f02000a
+			public const int negative05 = 2130837514;
+			
+			// aapt resource value: 0x7f02000b
+			public const int positive01 = 2130837515;
+			
+			// aapt resource value: 0x7f02000c
+			public const int positive02 = 2130837516;
+			
+			// aapt resource value: 0x7f02000d
+			public const int positive03 = 2130837517;
+			
+			// aapt resource value: 0x7f02000e
+			public const int positive04 = 2130837518;
+			
+			// aapt resource value: 0x7f02000f
+			public const int positive05 = 2130837519;
+			
+			// aapt resource value: 0x7f020010
+			public const int splashscreen = 2130837520;
 			
 			static Drawable()
 			{
@@ -151,23 +181,38 @@ namespace GuestbookBirthdayParty.Droid
 			// aapt resource value: 0x7f060009
 			public const int secondAnswer = 2131099657;
 			
-			// aapt resource value: 0x7f06000f
-			public const int secondQFirstAnswer = 2131099663;
+			// aapt resource value: 0x7f060016
+			public const int secondQBFifthAnswer = 2131099670;
 			
-			// aapt resource value: 0x7f060010
-			public const int secondQSecondAnswer = 2131099664;
+			// aapt resource value: 0x7f060012
+			public const int secondQBFirstAnswer = 2131099666;
+			
+			// aapt resource value: 0x7f060015
+			public const int secondQBFourthAnswer = 2131099669;
+			
+			// aapt resource value: 0x7f060013
+			public const int secondQBSecondAnswer = 2131099667;
+			
+			// aapt resource value: 0x7f060014
+			public const int secondQBThirdAnswer = 2131099668;
 			
 			// aapt resource value: 0x7f060011
-			public const int secondQThirdAnswer = 2131099665;
+			public const int secondQuestionBHeadline = 2131099665;
+			
+			// aapt resource value: 0x7f060010
+			public const int secondQuestionBSubHeadline = 2131099664;
+			
+			// aapt resource value: 0x7f06000f
+			public const int secondQuestionHeadline = 2131099663;
 			
 			// aapt resource value: 0x7f06000e
-			public const int secondQuestionHeadline = 2131099662;
-			
-			// aapt resource value: 0x7f06000d
-			public const int secondQuestionSubHeadline = 2131099661;
+			public const int secondQuestionSubHeadline = 2131099662;
 			
 			// aapt resource value: 0x7f060003
 			public const int sendButton = 2131099651;
+			
+			// aapt resource value: 0x7f06000d
+			public const int startMe = 2131099661;
 			
 			// aapt resource value: 0x7f060004
 			public const int takeThePictureButton = 2131099652;

@@ -4,11 +4,13 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:gravity="center"
     android:background="@drawable/background">
-    <Button
-        android:text="Click me"
+    <ImageButton
+        android:background="@drawable/clickme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="40dp"
+        android:id="@+id/startMe"
         local:MvxBind="Click GoFirstQuestionCommand" />
 </LinearLayout>

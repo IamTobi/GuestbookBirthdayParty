@@ -11,45 +11,63 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center">
-        <TextView
-            android:text="Third question here"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textSize="40dp"
-            android:id="@+id/textView1" />
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-            <ImageButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                 android:background="@drawable/ic_chalksmileys_01"
-                android:layout_marginRight="20dp"
-                local:MvxBind="Click AnswerClickedCommand,CommandParameter=first"
-                android:id="@+id/firstAnswer" />
-            <ImageButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@drawable/ic_chalksmileys_02"
-                android:layout_marginRight="20dp"
-                local:MvxBind="Click AnswerClickedCommand,CommandParameter=second"
-                android:id="@+id/secondAnswer" />
-            <ImageButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@drawable/ic_chalksmileys_04"
-                android:layout_marginRight="20dp"
-                local:MvxBind="Click AnswerClickedCommand,CommandParameter=third"
-                android:id="@+id/thirdAnswer" />
-            <ImageButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                 android:background="@drawable/ic_chalksmileys_05"
-                android:layout_marginRight="20dp"
-                local:MvxBind="Click AnswerClickedCommand,CommandParameter=fourth"
-                android:id="@+id/fourthAnswer" />
-        </LinearLayout>
+      <TextView
+    android:text="#2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textSize="20dp"
+    android:color="#d3d3d3"
+    android:layout_marginLeft="18dip"
+    android:id="@+id/secondQuestionBSubHeadline" />
+      <TextView
+        android:text="Warum würdest du die Party weiterempfehlen?"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="50dp"
+        android:layout_marginLeft="18dip"
+        android:id="@+id/secondQuestionBHeadline" />
+      <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dip"
+        android:gravity="center">
+        <Button
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:layout_marginRight="20dp"
+          local:MvxBind="Click AnswerClickedCommand,CommandParameter=gute Musik"
+          android:text="gute Musik"
+          android:id="@+id/secondQBFirstAnswer" />
+        <Button
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:layout_marginRight="20dp"
+          local:MvxBind="Click AnswerClickedCommand,CommandParameter=genug Alkohol"
+          android:text="Es ist genug Alkohol da/gute Auswahl"
+          android:id="@+id/secondQBSecondAnswer" />
+        <Button
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:layout_marginRight="20dp"
+          local:MvxBind="Click AnswerClickedCommand,CommandParameter=coole Leute"
+          android:text="Interressante/Geile Leute hier"
+          android:id="@+id/secondQBThirdAnswer" />
+        <Button
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:layout_marginRight="20dp"
+          local:MvxBind="Click AnswerClickedCommand,CommandParameter=StineundTobi4Eva"
+          android:text="Stine und Tobi 4 eva"
+          android:id="@+id/secondQBFourthAnswer" />
+        <Button
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:layout_marginRight="20dp"
+          local:MvxBind="Click AnswerClickedCommand,CommandParameter=jemanden kennengelernt"
+          android:text="Ich habe heute jemanden kennengelernt"
+          android:id="@+id/secondQBFifthAnswer" />
+
+      </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

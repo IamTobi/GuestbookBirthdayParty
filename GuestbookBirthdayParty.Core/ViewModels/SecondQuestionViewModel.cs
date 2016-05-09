@@ -1,6 +1,4 @@
 ﻿using MvvmCross.Core.ViewModels;
-using System.Diagnostics;
-using GuestbookBirthdayParty.Core.Models;
 using GuestbookBirthdayParty.Core.Services;
 
 namespace GuestbookBirthdayParty.Core.ViewModels
@@ -30,13 +28,13 @@ namespace GuestbookBirthdayParty.Core.ViewModels
         private void DoAnswerClickedCommand(string chosenAnswer)
         {
             SaveChosenAnswer(chosenAnswer);
-            ShowViewModel<ThirdQuestionViewModel>();
+            ShowViewModel<FinishViewModel>();
         }
 
         private void SaveChosenAnswer(string answer)
         {
+            _dataService.UpdateTheAnswer(answer,2);
             
-            Debug.WriteLine(answer);
         }
 
     }
