@@ -1,23 +1,21 @@
 using System;
-using System.Collections.Generic;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
 using Android.Graphics;
-using Android.Locations;
 using Android.OS;
 using Android.Provider;
 using Android.Widget;
-using GuestbookBirthdayParty.Core;
+using GuestbookBirthdayParty.Core.ViewModels;
 using Java.IO;
-using Java.Util;
 using MvvmCross.Droid.Views;
 using Environment = Android.OS.Environment;
 using Uri = Android.Net.Uri;
 
 namespace GuestbookBirthdayParty.Droid.Views
 {
-    [Activity(Label = "Gästebucheintrag", ScreenOrientation = ScreenOrientation.Landscape, Icon = "@android:color/transparent")]
+    [Activity(Label = "Deine Meinung", ScreenOrientation = ScreenOrientation.Landscape,
+        Icon = "@android:color/transparent")]
     public class FinishView : MvxActivity
     {
         public static File File;
@@ -25,6 +23,10 @@ namespace GuestbookBirthdayParty.Droid.Views
         public static ImageView ImageView;
         public static Bitmap Bitmap;
 
+        protected FinishViewModel MainViewModel
+        {
+            get { return ViewModel as FinishViewModel; }
+        }
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -34,7 +36,7 @@ namespace GuestbookBirthdayParty.Droid.Views
             if (IsThereAnAppToTakePictures())
             {
                 CreateDirectoryForPictures();
-                var button = FindViewById<Button>(Resource.Id.takeThePictureButton);
+                var button = FindViewById<ImageButton>(Resource.Id.takeThePictureButton);
                 ImageView = FindViewById<ImageView>(Resource.Id.imageView1);
                 button.Click += TakeAPicture;
             }
@@ -42,8 +44,7 @@ namespace GuestbookBirthdayParty.Droid.Views
 
         private static void CreateDirectoryForPictures()
         {
-            Dir = new File(
-                Environment.GetExternalStoragePublicDirectory(Environment.DirectoryPictures),"BirthdayPics");
+            Dir = new File(Environment.GetExternalStoragePublicDirectory(Environment.DirectoryPictures), "BirthdayPics");
             if (!Dir.Exists())
             {
                 Dir.Mkdirs();
@@ -60,11 +61,12 @@ namespace GuestbookBirthdayParty.Droid.Views
 
         private void TakeAPicture(object sender, EventArgs eventArgs)
         {
-            Intent intent = new Intent(MediaStore.ActionImageCapture);
+            var intent = new Intent(MediaStore.ActionImageCapture);
 
-            File = new File(Dir,String.Format("photo_{0}.jpg",Guid.NewGuid()));
+            File = new File(Dir, $"photo_{Guid.NewGuid()}.jpg");
+            MainViewModel.SetPathToImage(File.CanonicalPath);
             intent.PutExtra(MediaStore.ExtraOutput, Uri.FromFile(File));
-            StartActivityForResult(intent,0);
+            StartActivityForResult(intent, 0);
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
@@ -73,8 +75,8 @@ namespace GuestbookBirthdayParty.Droid.Views
 
             // Make it available in the gallery
 
-            Intent mediaScanIntent = new Intent(Intent.ActionMediaScannerScanFile);
-            Uri contentUri = Uri.FromFile(File);
+            var mediaScanIntent = new Intent(Intent.ActionMediaScannerScanFile);
+            var contentUri = Uri.FromFile(File);
             mediaScanIntent.SetData(contentUri);
             SendBroadcast(mediaScanIntent);
 
@@ -82,13 +84,14 @@ namespace GuestbookBirthdayParty.Droid.Views
             // Loading the full sized image will consume to much memory
             // and cause the application to crash.
 
-            int height = Resources.DisplayMetrics.HeightPixels;
-            int width = ImageView.Height;
+            var height = Resources.DisplayMetrics.HeightPixels;
+            var width = ImageView.Height;
             Bitmap = File.Path.LoadAndResizeBitmap(width, height);
+
             if (Bitmap != null)
             {
                 ImageView.SetImageBitmap(Bitmap);
-                Bitmap= null;
+                Bitmap = null;
             }
 
             // Dispose of the Java side bitmap.
@@ -97,7 +100,6 @@ namespace GuestbookBirthdayParty.Droid.Views
 
         public override void OnBackPressed()
         {
-
         }
     }
 
@@ -106,28 +108,35 @@ namespace GuestbookBirthdayParty.Droid.Views
         public static Bitmap LoadAndResizeBitmap(this string fileName, int width, int height)
         {
             // First we get the the dimensions of the file on disk
-            BitmapFactory.Options options = new BitmapFactory.Options { InJustDecodeBounds = true };
+            var options = new BitmapFactory.Options {InJustDecodeBounds = true};
             BitmapFactory.DecodeFile(fileName, options);
 
             // Next we calculate the ratio that we need to resize the image by
             // in order to fit the requested dimensions.
-            int outHeight = options.OutHeight;
-            int outWidth = options.OutWidth;
-            int inSampleSize = 1;
+            var outHeight = options.OutHeight;
+            var outWidth = options.OutWidth;
+            var inSampleSize = 1;
 
             if (outHeight > height || outWidth > width)
             {
                 inSampleSize = outWidth > outHeight
-                                   ? outHeight / height
-                                   : outWidth / width;
+                    ? outHeight/height
+                    : outWidth/width;
             }
 
             // Now we will load the image and have BitmapFactory resize it for us.
             options.InSampleSize = inSampleSize;
             options.InJustDecodeBounds = false;
-            Bitmap resizedBitmap = BitmapFactory.DecodeFile(fileName, options);
+            var resizedBitmap = BitmapFactory.DecodeFile(fileName, options);
 
-            return resizedBitmap;
+            // create new matrix for transformation
+            var matrix = new Matrix();
+            
+            // x = x * -1
+            matrix.PreScale(-1.0f, 1.0f);
+            
+            // return transformed image
+            return Bitmap.CreateBitmap(resizedBitmap, 0, 0, resizedBitmap.Width, resizedBitmap.Height, matrix, true);
         }
     }
 }

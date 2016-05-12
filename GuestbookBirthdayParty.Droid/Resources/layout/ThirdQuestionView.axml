@@ -1,73 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:local="http://schemas.android.com/apk/res-auto"
+                xmlns:local="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/background"
+                android:gravity="center">
+  <LinearLayout
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/background"
+    android:layout_height="wrap_content"
     android:gravity="center">
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-      <TextView
-    android:text="#2"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:textSize="20dp"
-    android:color="#d3d3d3"
-    android:layout_marginLeft="18dip"
-    android:id="@+id/secondQuestionBSubHeadline" />
-      <TextView
-        android:text="Warum würdest du die Party weiterempfehlen?"
+    <TextView
+      android:text="#3"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:textSize="20dp"
+      android:color="#d3d3d3"
+      android:layout_marginLeft="18dip"
+      android:id="@+id/secondQuestionBSubHeadline" />
+    <TextView
+      android:text="Warum würdest du die Party weiterempfehlen?"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:textSize="50dp"
+      android:layout_marginLeft="18dip"
+      android:id="@+id/secondQuestionBHeadline" />
+    <TableLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="100dip">
+      <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="50dp"
-        android:layout_marginLeft="18dip"
-        android:id="@+id/secondQuestionBHeadline" />
-      <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dip"
-        android:gravity="center">
-        <Button
-          android:layout_width="100dp"
-          android:layout_height="100dp"
-          android:layout_marginRight="20dp"
-          local:MvxBind="Click AnswerClickedCommand,CommandParameter=gute Musik"
-          android:text="gute Musik"
-          android:id="@+id/secondQBFirstAnswer" />
-        <Button
-          android:layout_width="100dp"
-          android:layout_height="100dp"
-          android:layout_marginRight="20dp"
-          local:MvxBind="Click AnswerClickedCommand,CommandParameter=genug Alkohol"
-          android:text="Es ist genug Alkohol da/gute Auswahl"
-          android:id="@+id/secondQBSecondAnswer" />
-        <Button
-          android:layout_width="100dp"
-          android:layout_height="100dp"
-          android:layout_marginRight="20dp"
-          local:MvxBind="Click AnswerClickedCommand,CommandParameter=coole Leute"
-          android:text="Interressante/Geile Leute hier"
-          android:id="@+id/secondQBThirdAnswer" />
-        <Button
-          android:layout_width="100dp"
-          android:layout_height="100dp"
-          android:layout_marginRight="20dp"
-          local:MvxBind="Click AnswerClickedCommand,CommandParameter=StineundTobi4Eva"
-          android:text="Stine und Tobi 4 eva"
-          android:id="@+id/secondQBFourthAnswer" />
-        <Button
-          android:layout_width="100dp"
-          android:layout_height="100dp"
-          android:layout_marginRight="20dp"
-          local:MvxBind="Click AnswerClickedCommand,CommandParameter=jemanden kennengelernt"
-          android:text="Ich habe heute jemanden kennengelernt"
-          android:id="@+id/secondQBFifthAnswer" />
-
-      </LinearLayout>
-    </LinearLayout>
+        android:gravity="center_horizontal">
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+          <ImageButton
+            android:layout_width="414dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left"
+             android:layout_marginRight="100dp"
+            local:MvxBind="Click AnswerClickedCommand,CommandParameter=Stine und Tobi 4 eva"
+            android:background="@drawable/positive04" />
+        </LinearLayout>
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+          <ImageButton
+            android:layout_width="220dp"
+            android:layout_height="60dp"
+            local:MvxBind="Click AnswerClickedCommand,CommandParameter=gute Musik"
+            android:background="@drawable/positive01"
+            android:layout_gravity="left" />
+        </LinearLayout>
+      </TableRow>
+      <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="50dp">
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+          <ImageButton
+            android:layout_width="336dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left"
+            local:MvxBind="Click AnswerClickedCommand,CommandParameter=coole Leute"
+            android:background="@drawable/positive03" />
+        </LinearLayout>
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+          <ImageButton
+            android:layout_width="482dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left"
+            local:MvxBind="Click AnswerClickedCommand,CommandParameter=genug Alkohol"
+            android:background="@drawable/positive02" />
+        </LinearLayout>
+      </TableRow>
+      <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+         android:gravity="center_horizontal">
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_span="2">
+          <ImageButton
+            android:layout_width="827dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left"
+            local:MvxBind="Click AnswerClickedCommand,CommandParameter=jemanden kennengelernt"
+            android:background="@drawable/positive05" />
+        </LinearLayout>
+      </TableRow>
+    </TableLayout>
+  </LinearLayout>
 </RelativeLayout>

@@ -139,7 +139,13 @@ namespace GuestbookBirthdayParty.Droid
 			public const int positive05 = 2130837519;
 			
 			// aapt resource value: 0x7f020010
-			public const int splashscreen = 2130837520;
+			public const int selfie2 = 2130837520;
+			
+			// aapt resource value: 0x7f020011
+			public const int send = 2130837521;
+			
+			// aapt resource value: 0x7f020012
+			public const int splashscreen = 2130837522;
 			
 			static Drawable()
 			{
@@ -160,68 +166,50 @@ namespace GuestbookBirthdayParty.Droid
 			// aapt resource value: 0x7f060001
 			public const int MvxBindingTagUnique = 2131099649;
 			
-			// aapt resource value: 0x7f06000c
-			public const int fifthAnswer = 2131099660;
-			
-			// aapt resource value: 0x7f060008
-			public const int firstAnswer = 2131099656;
+			// aapt resource value: 0x7f06000b
+			public const int fifthAnswer = 2131099659;
 			
 			// aapt resource value: 0x7f060007
-			public const int firstQuestionHeadline = 2131099655;
+			public const int firstAnswer = 2131099655;
 			
 			// aapt resource value: 0x7f060006
-			public const int firstQuestionSubheadline = 2131099654;
-			
-			// aapt resource value: 0x7f06000b
-			public const int fourthAnswer = 2131099659;
+			public const int firstQuestionHeadline = 2131099654;
 			
 			// aapt resource value: 0x7f060005
-			public const int imageView1 = 2131099653;
-			
-			// aapt resource value: 0x7f060009
-			public const int secondAnswer = 2131099657;
-			
-			// aapt resource value: 0x7f060016
-			public const int secondQBFifthAnswer = 2131099670;
-			
-			// aapt resource value: 0x7f060012
-			public const int secondQBFirstAnswer = 2131099666;
-			
-			// aapt resource value: 0x7f060015
-			public const int secondQBFourthAnswer = 2131099669;
-			
-			// aapt resource value: 0x7f060013
-			public const int secondQBSecondAnswer = 2131099667;
-			
-			// aapt resource value: 0x7f060014
-			public const int secondQBThirdAnswer = 2131099668;
-			
-			// aapt resource value: 0x7f060011
-			public const int secondQuestionBHeadline = 2131099665;
-			
-			// aapt resource value: 0x7f060010
-			public const int secondQuestionBSubHeadline = 2131099664;
-			
-			// aapt resource value: 0x7f06000f
-			public const int secondQuestionHeadline = 2131099663;
-			
-			// aapt resource value: 0x7f06000e
-			public const int secondQuestionSubHeadline = 2131099662;
-			
-			// aapt resource value: 0x7f060003
-			public const int sendButton = 2131099651;
-			
-			// aapt resource value: 0x7f06000d
-			public const int startMe = 2131099661;
-			
-			// aapt resource value: 0x7f060004
-			public const int takeThePictureButton = 2131099652;
-			
-			// aapt resource value: 0x7f060002
-			public const int textView1 = 2131099650;
+			public const int firstQuestionSubheadline = 2131099653;
 			
 			// aapt resource value: 0x7f06000a
-			public const int thirdAnswer = 2131099658;
+			public const int fourthAnswer = 2131099658;
+			
+			// aapt resource value: 0x7f060003
+			public const int imageView1 = 2131099651;
+			
+			// aapt resource value: 0x7f060008
+			public const int secondAnswer = 2131099656;
+			
+			// aapt resource value: 0x7f060010
+			public const int secondQuestionBHeadline = 2131099664;
+			
+			// aapt resource value: 0x7f06000f
+			public const int secondQuestionBSubHeadline = 2131099663;
+			
+			// aapt resource value: 0x7f06000e
+			public const int secondQuestionHeadline = 2131099662;
+			
+			// aapt resource value: 0x7f06000d
+			public const int secondQuestionSubHeadline = 2131099661;
+			
+			// aapt resource value: 0x7f060004
+			public const int sendButton = 2131099652;
+			
+			// aapt resource value: 0x7f06000c
+			public const int startMe = 2131099660;
+			
+			// aapt resource value: 0x7f060002
+			public const int takeThePictureButton = 2131099650;
+			
+			// aapt resource value: 0x7f060009
+			public const int thirdAnswer = 2131099657;
 			
 			static Id()
 			{
@@ -237,22 +225,25 @@ namespace GuestbookBirthdayParty.Droid
 		{
 			
 			// aapt resource value: 0x7f040000
-			public const int FinishView = 2130968576;
+			public const int Answer_Item = 2130968576;
 			
 			// aapt resource value: 0x7f040001
-			public const int FirstQuestionView = 2130968577;
+			public const int FinishView = 2130968577;
 			
 			// aapt resource value: 0x7f040002
-			public const int FirstView = 2130968578;
+			public const int FirstQuestionView = 2130968578;
 			
 			// aapt resource value: 0x7f040003
-			public const int SecondQuestionView = 2130968579;
+			public const int FirstView = 2130968579;
 			
 			// aapt resource value: 0x7f040004
-			public const int SplashScreen = 2130968580;
+			public const int SecondQuestionView = 2130968580;
 			
 			// aapt resource value: 0x7f040005
-			public const int ThirdQuestionView = 2130968581;
+			public const int SplashScreen = 2130968581;
+			
+			// aapt resource value: 0x7f040006
+			public const int ThirdQuestionView = 2130968582;
 			
 			static Layout()
 			{

@@ -55,13 +55,13 @@
         android:gravity="center_horizontal"
         android:layout_marginTop="50dp">
         <ImageButton
-          android:layout_width="346dp"
+          android:layout_width="424dp"
           android:layout_height="60dp"
           local:MvxBind="Click AnswerClickedCommand,CommandParameter=Musik zu laut/leise"
           android:background="@drawable/negative04"
           android:layout_marginRight="100dip" />
         <ImageButton
-          android:layout_width="597dp"
+          android:layout_width="629dp"
           android:layout_height="60dp"
           android:layout_gravity="right"
           local:MvxBind="Click AnswerClickedCommand,CommandParameter=ich fühle mich ausgeschlossen"

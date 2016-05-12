@@ -10,13 +10,13 @@ namespace GuestbookBirthdayParty.Core.Services
     {
         public DataService(IMvxSqliteConnectionFactory sqliteConnectionFactory)
         {
-            _connection = sqliteConnectionFactory.GetConnection("data.dat");
+            _connection = sqliteConnectionFactory.GetConnection("data2.dat");
             _connection.CreateTable<Answer>();
         }
 
         public void InitTheAnswer()
         {
-            WhatThePeopleSaid = new Answer();
+            _whatThePeopleSaid = new Answer();
         }
 
         public void UpdateTheAnswer(string answer, int questionNumber)
@@ -24,16 +24,22 @@ namespace GuestbookBirthdayParty.Core.Services
             switch (questionNumber)
             {
                 case 1:
-                    WhatThePeopleSaid.Answer1 = answer;
+                    _whatThePeopleSaid.FirstAnswer = answer;
                     break;
                 case 2:
-                    WhatThePeopleSaid.Answer2 = answer;
+                    _whatThePeopleSaid.NegativeAnswer = answer;
                     break;
                 case 3:
-                    WhatThePeopleSaid.Answer3 = answer;
+                    _whatThePeopleSaid.PositiveAnswer = answer;
                     break;
                 case 4:
-                    WhatThePeopleSaid.Answer4 = answer;
+                    _whatThePeopleSaid.AnswerForNumber4 = answer;
+                    break;
+                case 5:
+                    _whatThePeopleSaid.PathToImage = answer;
+                    break;
+                case 6:
+                    _whatThePeopleSaid.TextForUs = answer;
                     break;
             }
         }
@@ -46,7 +52,7 @@ namespace GuestbookBirthdayParty.Core.Services
 
         public void InsertTheAnswer()
         {
-            _connection.Insert(WhatThePeopleSaid);
+            _connection.Insert(_whatThePeopleSaid);
         }
 
 
@@ -56,7 +62,7 @@ namespace GuestbookBirthdayParty.Core.Services
 
         private readonly SQLiteConnection _connection;
 
-        private Answer WhatThePeopleSaid;
+        private Answer _whatThePeopleSaid;
 
         #endregion
     }

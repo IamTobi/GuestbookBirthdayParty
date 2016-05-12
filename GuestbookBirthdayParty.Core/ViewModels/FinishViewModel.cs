@@ -9,12 +9,22 @@ namespace GuestbookBirthdayParty.Core.ViewModels
     {
         private readonly IDataService _dataService;
 
+        private string _pathToImage="";
+
         private List<Answer> _answerList;
         public List<Answer> AnswerList
         {
             get { return _answerList; }
             set { _answerList = value; RaisePropertyChanged(() => AnswerList); }
         }
+
+        private string _textForUs;
+        public string TextForUs
+        {
+            get { return _textForUs; }
+            set { _textForUs = value; RaisePropertyChanged(() => TextForUs); }
+        }
+
 
         public FinishViewModel(IDataService dataService)
         {
@@ -23,7 +33,6 @@ namespace GuestbookBirthdayParty.Core.ViewModels
 
         public void Init()
         {
-            _dataService.InsertTheAnswer();
             AnswerList = _dataService.GetAllTheAnswers();
         }
 
@@ -39,7 +48,15 @@ namespace GuestbookBirthdayParty.Core.ViewModels
 
         private void DoSendClickedCommand()
         {
+            _dataService.UpdateTheAnswer(TextForUs, 6);
+            _dataService.UpdateTheAnswer(_pathToImage, 5);
+            _dataService.InsertTheAnswer();
             ShowViewModel<FirstViewModel>();
+        }
+
+        public void SetPathToImage(string pathToImage)
+        {
+            _pathToImage = pathToImage;
         }
         
 
