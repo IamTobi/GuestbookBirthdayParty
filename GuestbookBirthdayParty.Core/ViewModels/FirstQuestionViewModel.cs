@@ -32,15 +32,15 @@ namespace GuestbookBirthdayParty.Core.ViewModels
             SaveChosenAnswer(chosenAnswer);
             switch (chosenAnswer)
             {
-                case "first":
-                case "second":
-                case "third":
+                case "ganz schlecht":
+                case "schlecht":
+                case "ok":
                     ShowViewModel<SecondQuestionViewModel>();
                     break;
-                case "fourth":
-
+                case "gut":
+                    ShowViewModel<FourthQuestionViewModel>();
                     break;
-                case "fifth":
+                case "hammer!":
                     ShowViewModel<ThirdQuestionViewModel>();
                     break;
             }

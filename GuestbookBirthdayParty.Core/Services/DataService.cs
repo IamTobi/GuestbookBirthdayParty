@@ -10,7 +10,7 @@ namespace GuestbookBirthdayParty.Core.Services
     {
         public DataService(IMvxSqliteConnectionFactory sqliteConnectionFactory)
         {
-            _connection = sqliteConnectionFactory.GetConnection("data2.dat");
+            _connection = sqliteConnectionFactory.GetConnection("final.dat");
             _connection.CreateTable<Answer>();
         }
 

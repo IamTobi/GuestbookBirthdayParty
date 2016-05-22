@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:gravity="center">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <TextView
+            android:text="#2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:color="#d3d3d3"
+            android:layout_marginLeft="18dip"
+            android:id="@+id/secondQuestionSubHeadline" />
+        <TextView
+            android:text="Wie häufig warst du in den letzten 6 Monaten auf einer Geburtagsfete?"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="50dp"
+            android:layout_marginLeft="18dip"
+            android:id="@+id/secondQuestionHeadline" />
+        <TableLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dip">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+                <ImageButton
+                    android:layout_width="190dp"
+                    android:layout_height="60dp"
+                    local:MvxBind="Click AnswerClickedCommand,CommandParameter=gar nicht"
+                    android:background="@drawable/howmuch1"
+                    android:layout_marginRight="100dip" />
+                <ImageButton
+                    android:layout_width="139dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="right"
+                    android:background="@drawable/howmuch2"
+                    local:MvxBind="Click AnswerClickedCommand,CommandParameter=war auf 1 bis 2"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="50dp">
+                <ImageButton
+                    android:layout_width="145dp"
+                    android:layout_height="60dp"
+                    local:MvxBind="Click AnswerClickedCommand,CommandParameter=war auf 3 bis 5"
+                    android:background="@drawable/howmuch3"
+                    android:layout_marginRight="100dip" />
+                <ImageButton
+                    android:layout_width="163dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="right"
+                    local:MvxBind="Click AnswerClickedCommand,CommandParameter=war auf 5 bis 10"
+                    android:background="@drawable/howmuch4" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="50dp">
+                <ImageButton
+                    android:layout_span="2"
+                    android:layout_width="311dp"
+                    android:layout_height="60dp"
+                    local:MvxBind="Click AnswerClickedCommand,CommandParameter=mehr als 10 mal"
+                    android:background="@drawable/howmuch5"
+                    android:layout_marginRight="100dip" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</RelativeLayout>

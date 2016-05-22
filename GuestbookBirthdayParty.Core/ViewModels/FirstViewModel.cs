@@ -1,4 +1,6 @@
+using System.Runtime.InteropServices.ComTypes;
 using System.Windows.Input;
+using Android.Util;
 using GuestbookBirthdayParty.Core.Services;
 using MvvmCross.Core.ViewModels;
 
@@ -6,7 +8,8 @@ namespace GuestbookBirthdayParty.Core.ViewModels
 {
     public class FirstViewModel : MvxViewModel
     {
-        private IDataService _dataService;
+        private readonly IDataService _dataService;
+        private int _countForStats;
 
         public FirstViewModel(IDataService dataService1)
         {
@@ -16,6 +19,7 @@ namespace GuestbookBirthdayParty.Core.ViewModels
         public void Init()
         {
             _dataService.InitTheAnswer();
+            _countForStats = 0;
         }
         #region commands
 
@@ -36,6 +40,28 @@ namespace GuestbookBirthdayParty.Core.ViewModels
         private void DoGoFirstQuestionCommand()
         {
             ShowViewModel<FirstQuestionViewModel>();
+        }
+
+        private MvxCommand _goStatsCommand;
+        public ICommand GoStatsCommand
+        {
+            get
+            {
+                _goStatsCommand = _goStatsCommand ?? new MvxCommand(DoGoStatsCommand);
+                return _goStatsCommand;
+            }
+        }
+
+
+        private void DoGoStatsCommand()
+        {
+            _countForStats++;
+            if (_countForStats==4)
+            {
+                _countForStats = 0;
+                ShowViewModel<StatsViewModel>();
+            }
+            
         }
         #endregion
         

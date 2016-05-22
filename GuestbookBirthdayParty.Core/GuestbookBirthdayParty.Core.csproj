@@ -40,6 +40,8 @@
     <Compile Include="Services\DataService.cs" />
     <Compile Include="Services\IDataService.cs" />
     <Compile Include="ViewModels\FinishViewModel.cs" />
+    <Compile Include="ViewModels\FourthQuestionViewModel.cs" />
+    <Compile Include="ViewModels\StatsViewModel.cs" />
     <Compile Include="ViewModels\ThirdQuestionViewModel.cs" />
     <Compile Include="ViewModels\SecondQuestionViewModel.cs" />
     <Compile Include="ViewModels\FirstQuestionViewModel.cs" />

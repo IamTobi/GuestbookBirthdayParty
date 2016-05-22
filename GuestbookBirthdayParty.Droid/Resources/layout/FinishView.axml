@@ -65,13 +65,7 @@
         android:layout_height="60dp"
         local:MvxBind="Click SendClickedCommand,CommandParameter=send"
         android:id="@+id/sendButton" />
-      <Mvx.MvxListView
-          android:minWidth="25px"
-          android:minHeight="25px"
-          android:layout_width="fill_parent"
-          android:layout_height="fill_parent"
-          local:MvxBind="ItemsSource AnswerList"
-          local:MvxItemTemplate="@layout/answer_item"/>
+      
     </LinearLayout>
   </LinearLayout>
 

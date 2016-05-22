@@ -21,7 +21,7 @@
       android:layout_marginLeft="18dip"
       android:id="@+id/firstQuestionSubheadline" />
     <TextView
-      android:text="Würdest du diese Sause weiterempfehlen?"
+      android:text="Würdest du diese Fete weiterempfehlen?"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:textSize="50dp"
@@ -38,35 +38,35 @@
         android:layout_height="150dp"
         android:background="@drawable/ic_chalksmileys_01"
         android:layout_marginRight="50dp"
-        local:MvxBind="Click AnswerClickedCommand,CommandParameter=first"
+        local:MvxBind="Click AnswerClickedCommand,CommandParameter=ganz schlecht"
         android:id="@+id/firstAnswer" />
       <ImageButton
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:background="@drawable/ic_chalksmileys_02"
         android:layout_marginRight="50dp"
-        local:MvxBind="Click AnswerClickedCommand,CommandParameter=second"
+        local:MvxBind="Click AnswerClickedCommand,CommandParameter=schlecht"
         android:id="@+id/secondAnswer" />
       <ImageButton
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:background="@drawable/ic_chalksmileys_03"
         android:layout_marginRight="50dp"
-        local:MvxBind="Click AnswerClickedCommand,CommandParameter=third"
+        local:MvxBind="Click AnswerClickedCommand,CommandParameter=ok"
         android:id="@+id/thirdAnswer" />
       <ImageButton
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:background="@drawable/ic_chalksmileys_04"
         android:layout_marginRight="50dp"
-        local:MvxBind="Click AnswerClickedCommand,CommandParameter=fourth"
+        local:MvxBind="Click AnswerClickedCommand,CommandParameter=gut"
         android:id="@+id/fourthAnswer" />
       <ImageButton
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:background="@drawable/ic_chalksmileys_05"
         android:layout_marginRight="50dp"
-        local:MvxBind="Click AnswerClickedCommand,CommandParameter=fifth"
+        local:MvxBind="Click AnswerClickedCommand,CommandParameter=hammer!"
         android:id="@+id/fifthAnswer" />
     </LinearLayout>
   </LinearLayout>

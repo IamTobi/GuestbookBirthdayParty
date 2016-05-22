@@ -97,55 +97,70 @@ namespace GuestbookBirthdayParty.Droid
 			public const int clickme = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int ic_chalksmileys_01 = 2130837506;
+			public const int howmuch1 = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int ic_chalksmileys_02 = 2130837507;
+			public const int howmuch2 = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int ic_chalksmileys_03 = 2130837508;
+			public const int howmuch3 = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int ic_chalksmileys_04 = 2130837509;
+			public const int howmuch4 = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int ic_chalksmileys_05 = 2130837510;
+			public const int howmuch5 = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int negative02 = 2130837511;
+			public const int ic_chalksmileys_01 = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int negative03 = 2130837512;
+			public const int ic_chalksmileys_02 = 2130837512;
 			
 			// aapt resource value: 0x7f020009
-			public const int negative04 = 2130837513;
+			public const int ic_chalksmileys_03 = 2130837513;
 			
 			// aapt resource value: 0x7f02000a
-			public const int negative05 = 2130837514;
+			public const int ic_chalksmileys_04 = 2130837514;
 			
 			// aapt resource value: 0x7f02000b
-			public const int positive01 = 2130837515;
+			public const int ic_chalksmileys_05 = 2130837515;
 			
 			// aapt resource value: 0x7f02000c
-			public const int positive02 = 2130837516;
+			public const int negative02 = 2130837516;
 			
 			// aapt resource value: 0x7f02000d
-			public const int positive03 = 2130837517;
+			public const int negative03 = 2130837517;
 			
 			// aapt resource value: 0x7f02000e
-			public const int positive04 = 2130837518;
+			public const int negative04 = 2130837518;
 			
 			// aapt resource value: 0x7f02000f
-			public const int positive05 = 2130837519;
+			public const int negative05 = 2130837519;
 			
 			// aapt resource value: 0x7f020010
-			public const int selfie2 = 2130837520;
+			public const int positive01 = 2130837520;
 			
 			// aapt resource value: 0x7f020011
-			public const int send = 2130837521;
+			public const int positive02 = 2130837521;
 			
 			// aapt resource value: 0x7f020012
-			public const int splashscreen = 2130837522;
+			public const int positive03 = 2130837522;
+			
+			// aapt resource value: 0x7f020013
+			public const int positive04 = 2130837523;
+			
+			// aapt resource value: 0x7f020014
+			public const int positive05 = 2130837524;
+			
+			// aapt resource value: 0x7f020015
+			public const int selfie2 = 2130837525;
+			
+			// aapt resource value: 0x7f020016
+			public const int send = 2130837526;
+			
+			// aapt resource value: 0x7f020017
+			public const int splashscreen = 2130837527;
 			
 			static Drawable()
 			{
@@ -237,13 +252,19 @@ namespace GuestbookBirthdayParty.Droid
 			public const int FirstView = 2130968579;
 			
 			// aapt resource value: 0x7f040004
-			public const int SecondQuestionView = 2130968580;
+			public const int FourthQuestionView = 2130968580;
 			
 			// aapt resource value: 0x7f040005
-			public const int SplashScreen = 2130968581;
+			public const int SecondQuestionView = 2130968581;
 			
 			// aapt resource value: 0x7f040006
-			public const int ThirdQuestionView = 2130968582;
+			public const int SplashScreen = 2130968582;
+			
+			// aapt resource value: 0x7f040007
+			public const int StatsView = 2130968583;
+			
+			// aapt resource value: 0x7f040008
+			public const int ThirdQuestionView = 2130968584;
 			
 			static Layout()
 			{
