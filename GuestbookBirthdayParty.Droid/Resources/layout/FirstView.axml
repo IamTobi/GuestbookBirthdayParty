@@ -3,11 +3,21 @@
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-    <Button
-        android:text="Click me"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background">
+    <ImageButton
+        android:background="@android:color/transparent"
+        android:layout_gravity="top"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        local:MvxBind="Click GoStatsCommand" />
+    <ImageButton
+        android:layout_marginTop="100dp"
+        android:background="@drawable/clickme"
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="40dp"
+        android:id="@+id/startMe"
         local:MvxBind="Click GoFirstQuestionCommand" />
 </LinearLayout>

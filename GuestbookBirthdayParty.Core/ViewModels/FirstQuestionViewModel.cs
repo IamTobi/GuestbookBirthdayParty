@@ -1,15 +1,21 @@
 ﻿using MvvmCross.Core.ViewModels;
+using System.Diagnostics;
+using GuestbookBirthdayParty.Core.Models;
+using GuestbookBirthdayParty.Core.Services;
 
 namespace GuestbookBirthdayParty.Core.ViewModels
 {
     public class FirstQuestionViewModel: MvxViewModel
     {
-        private string _answerChosen;
-        public string AnswerChosen
+        private readonly IDataService _dataService;
+
+       
+
+        public FirstQuestionViewModel(IDataService dataService)
         {
-            get { return _answerChosen; }
-            set { _answerChosen = value; RaisePropertyChanged(() => AnswerChosen); }
+            _dataService = dataService;
         }
+
 
         IMvxCommand _answerClickedCommand;
         public System.Windows.Input.ICommand AnswerClickedCommand
@@ -24,12 +30,26 @@ namespace GuestbookBirthdayParty.Core.ViewModels
         private void DoAnswerClickedCommand(string chosenAnswer)
         {
             SaveChosenAnswer(chosenAnswer);
-            ShowViewModel<FirstViewModel>();
+            switch (chosenAnswer)
+            {
+                case "ganz schlecht":
+                case "schlecht":
+                case "ok":
+                    ShowViewModel<SecondQuestionViewModel>();
+                    break;
+                case "gut":
+                    ShowViewModel<FourthQuestionViewModel>();
+                    break;
+                case "hammer!":
+                    ShowViewModel<ThirdQuestionViewModel>();
+                    break;
+            }
         }
 
         private void SaveChosenAnswer(string answer)
         {
-
+            
+            _dataService.UpdateTheAnswer(answer,1);
         }
 
     }

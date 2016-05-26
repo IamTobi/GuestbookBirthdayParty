@@ -1,51 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:local="http://schemas.android.com/apk/res-auto"
+                xmlns:local="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/background"
+                android:gravity="center">
+  <LinearLayout
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="#400000"
+    android:layout_height="wrap_content"
     android:gravity="center">
+    <TextView
+      android:text="#1"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:textSize="20dp"
+      android:color="#d3d3d3"
+      android:layout_marginLeft="18dip"
+      android:id="@+id/firstQuestionSubheadline" />
+    <TextView
+      android:text="Würdest du diese Fete weiterempfehlen?"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:textSize="50dp"
+      android:layout_marginLeft="18dip"
+      android:id="@+id/firstQuestionHeadline" />
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-        <TextView
-            android:text="First question here"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textSize="40dp"
-            android:id="@+id/textView1" />
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-            <Button
-                android:text="first"
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                local:MvxBind="Click AnswerClickedCommand,CommandParameter=first"
-                android:id="@+id/firstAnswer" />
-            <Button
-                android:text="second"
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                local:MvxBind="Click AnswerClickedCommand,CommandParameter=second"
-                android:id="@+id/secondAnswer" />
-            <Button
-                android:text="third"
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                local:MvxBind="Click AnswerClickedCommand,CommandParameter=third"
-                android:id="@+id/thirdAnswer" />
-            <Button
-                android:text="fourth"
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                local:MvxBind="Click AnswerClickedCommand,CommandParameter=fourth"
-                android:id="@+id/fourthAnswer" />
-        </LinearLayout>
+      android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="100dip"
+      android:gravity="center">
+      <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/ic_chalksmileys_01"
+        android:layout_marginRight="50dp"
+        local:MvxBind="Click AnswerClickedCommand,CommandParameter=ganz schlecht"
+        android:id="@+id/firstAnswer" />
+      <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/ic_chalksmileys_02"
+        android:layout_marginRight="50dp"
+        local:MvxBind="Click AnswerClickedCommand,CommandParameter=schlecht"
+        android:id="@+id/secondAnswer" />
+      <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/ic_chalksmileys_03"
+        android:layout_marginRight="50dp"
+        local:MvxBind="Click AnswerClickedCommand,CommandParameter=ok"
+        android:id="@+id/thirdAnswer" />
+      <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/ic_chalksmileys_04"
+        android:layout_marginRight="50dp"
+        local:MvxBind="Click AnswerClickedCommand,CommandParameter=gut"
+        android:id="@+id/fourthAnswer" />
+      <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/ic_chalksmileys_05"
+        android:layout_marginRight="50dp"
+        local:MvxBind="Click AnswerClickedCommand,CommandParameter=hammer!"
+        android:id="@+id/fifthAnswer" />
     </LinearLayout>
+  </LinearLayout>
 </RelativeLayout>

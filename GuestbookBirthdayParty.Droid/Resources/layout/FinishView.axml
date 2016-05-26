@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:local="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/background"
+                android:gravity="center">
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="18dip" 
+    android:layout_marginRight="18dip" 
+    android:layout_marginTop="20dip" 
+    android:gravity="center">
+    <TextView
+      android:text="Lass uns doch einen netten Text und ein Foto da"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:textSize="50dp"/>
+    <RelativeLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="100dp">
+      <EditText
+        android:layout_width="600dp"
+        android:hint="hier deine Nachricht an uns"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="100dp"
+        local:MvxBind="Text TextForUs"
+        android:gravity="center"/>
+      <ImageButton
+        android:text="take the picture"
+        android:background="@drawable/selfie2"
+        android:layout_width="302dp"
+        android:layout_height="60dp"
+        android:id="@+id/takeThePictureButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+    <LinearLayout
+     android:orientation="vertical"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:gravity="right">
+
+      <ImageView
+        android:layout_marginTop="50dp"
+        android:layout_width="fill_parent"
+        android:layout_height="300.0dp"
+        android:id="@+id/imageView1"
+        android:adjustViewBounds="true" />
+      <ImageButton
+        
+        android:background="@drawable/send"
+         android:layout_marginBottom="15dp"
+         android:layout_marginRight="20dp"
+        android:gravity="right|bottom"
+        android:text="send"
+        android:layout_width="254dp"
+        android:layout_height="60dp"
+        local:MvxBind="Click SendClickedCommand,CommandParameter=send"
+        android:id="@+id/sendButton" />
+      
+    </LinearLayout>
+  </LinearLayout>
+
+  
+</RelativeLayout>

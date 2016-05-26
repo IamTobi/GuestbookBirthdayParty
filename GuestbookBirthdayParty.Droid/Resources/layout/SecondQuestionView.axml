@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:local="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/background"
+                android:gravity="center">
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+    <TextView
+      android:text="#2"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:textSize="20dp"
+      android:color="#d3d3d3"
+      android:layout_marginLeft="18dip"
+      android:id="@+id/secondQuestionSubHeadline" />
+    <TextView
+      android:text="Warum würdest du die Party nicht weiterempfehlen?"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:textSize="50dp"
+      android:layout_marginLeft="18dip"
+      android:id="@+id/secondQuestionHeadline" />
+    <TableLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="100dip">
+      <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+        <ImageButton
+          android:layout_width="346dp"
+          android:layout_height="60dp"
+          local:MvxBind="Click AnswerClickedCommand,CommandParameter=zu wenig Alkohol"
+          android:background="@drawable/negative02"
+          android:layout_marginRight="100dip" />
+        <ImageButton
+          android:layout_width="597dp"
+          android:layout_height="60dp"
+          android:layout_gravity="right"
+          local:MvxBind="Click AnswerClickedCommand,CommandParameter=Musik zu laut/leise"
+          android:background="@drawable/negative03" />
+      </TableRow>
+      <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="50dp">
+        <ImageButton
+          android:layout_width="424dp"
+          android:layout_height="60dp"
+          local:MvxBind="Click AnswerClickedCommand,CommandParameter=Musik zu laut/leise"
+          android:background="@drawable/negative04"
+          android:layout_marginRight="100dip" />
+        <ImageButton
+          android:layout_width="629dp"
+          android:layout_height="60dp"
+          android:layout_gravity="right"
+          local:MvxBind="Click AnswerClickedCommand,CommandParameter=ich fühle mich ausgeschlossen"
+          android:background="@drawable/negative05" />
+      </TableRow>
+    </TableLayout>
+  </LinearLayout>
+</RelativeLayout>

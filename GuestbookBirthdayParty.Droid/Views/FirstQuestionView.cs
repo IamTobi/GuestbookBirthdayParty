@@ -1,13 +1,11 @@
 using Android.App;
+using Android.Content.PM;
 using Android.OS;
-using Android.Views;
-using GuestbookBirthdayParty.Core.ViewModels;
 using MvvmCross.Droid.Views;
-using System;
 
 namespace GuestbookBirthdayParty.Droid.Views
 {
-    [Activity(Label = "View for FirstQuestionView")]
+    [Activity(Label = "Frage #1", ScreenOrientation = ScreenOrientation.Landscape, Icon = "@android:color/transparent")]
     public class FirstQuestionView : MvxActivity
     {
         
@@ -16,6 +14,11 @@ namespace GuestbookBirthdayParty.Droid.Views
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.FirstQuestionView);
+        }
+
+        public override void OnBackPressed()
+        {
+
         }
     }
 }
